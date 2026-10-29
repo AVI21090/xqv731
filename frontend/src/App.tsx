@@ -63,12 +63,34 @@ function App() {
             <div className="flex flex-col gap-3 md:flex-row md:items-center">
               <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-600">
                 <CalendarDays className="h-4 w-4 text-[#1f4d3a]" />
-                <input type="date" value={dateStart} onChange={(event) => setDateStart(event.target.value)} className="bg-transparent outline-none" />
+                <input
+  type="date"
+  value={dateStart}
+  max={dateEnd}
+  onChange={(event) => {
+    const nextStart = event.target.value
+    if (nextStart && nextStart <= dateEnd) {
+      setDateStart(nextStart)
+    }
+  }}
+  className="bg-transparent outline-none"
+/>
               </label>
               <span className="text-slate-400">to</span>
               <label className="flex items-center gap-2 rounded-lg border border-slate-200 bg-white px-3 py-2 text-sm text-slate-600">
                 <CalendarDays className="h-4 w-4 text-[#1f4d3a]" />
-                <input type="date" value={dateEnd} onChange={(event) => setDateEnd(event.target.value)} className="bg-transparent outline-none" />
+                <input
+  type="date"
+  value={dateEnd}
+  min={dateStart}
+  onChange={(event) => {
+    const nextEnd = event.target.value
+    if (nextEnd && nextEnd >= dateStart) {
+      setDateEnd(nextEnd)
+    }
+  }}
+  className="bg-transparent outline-none"
+/>
               </label>
               <button onClick={() => void load()} className="inline-flex items-center justify-center gap-2 rounded-lg border border-[#1f4d3a] bg-[#1f4d3a] px-4 py-2 text-sm font-medium text-white transition hover:bg-[#173d30]">
                 <RefreshCcw className="h-4 w-4" />

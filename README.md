@@ -90,10 +90,11 @@ The tests mock Elexon responses and do not require network access.
 
 ## Deployment and submission
 
-No live deployment URL or GitHub remote is configured in this workspace. For a simple split deployment, deploy `backend/` as a Python web service with `uvicorn app.main:app --host 0.0.0.0 --port 10000`, then deploy `frontend/` as a Vercel project with build command `npm run build`, output directory `dist`, and `VITE_API_BASE_URL` set to the backend URL. Add the deployed frontend origin to backend `CORS_ORIGINS`. Verify `/api/health` and the dashboard from an incognito browser after deployment.
+### Live deployment
 
-Before submission:
+- **Frontend:** https://wind-sight-pi.vercel.app/
+- **Backend API:** https://windsight-zvxb.onrender.com
+- **Health check:** https://windsight-zvxb.onrender.com/api/health
+- **GitHub repository:** https://github.com/AVI21090/xqv731
 
-1. Create and push the GitHub repository after reviewing the uncommitted files.
-2. Deploy the frontend and backend, then verify both public URLs and the January dashboard.
-3. Record an unlisted demo using [the walkthrough](docs/demo-script.md) and submit its URL in the assignment form.
+The frontend is deployed on Vercel and the FastAPI backend is deployed on Render.

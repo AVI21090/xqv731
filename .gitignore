@@ -1,0 +1,22 @@
+# Python
+.venv/
+.venv*/
+__pycache__/
+*.py[cod]
+*.pyo
+.pytest_cache/
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+frontend/dist/
+frontend/.vite/
+
+# Docker
+.cache/
+
+# OS
+.DS_Store
+Thumbs.db

@@ -98,3 +98,7 @@ The tests mock Elexon responses and do not require network access.
 - **GitHub repository:** https://github.com/AVI21090/xqv731
 
 The frontend is deployed on Vercel and the FastAPI backend is deployed on Render.
+
+## AI tools used
+
+AI-assisted development tools, including ChatGPT and OpenAI Codex, were used for planning, implementation assistance, debugging, documentation, and project review. All generated code and project behavior were reviewed and tested as part of development.
